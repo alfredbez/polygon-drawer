@@ -20,6 +20,9 @@ $(document).ready(function() {
 		new google.maps.Point(0, 0),
 		new google.maps.Point(12, 35));
 
+	var polygonFillColor 	= '#ff4444',
+		polygonStrokeColor 	= '#ff0000';
+
 	var markerAutoincrement = 0;
 
 	/*	Map initialisieren	*/
@@ -276,10 +279,10 @@ $(document).ready(function() {
 				/* Polygon hinzufuegen */
 				polygon = map.drawPolygon({
 					paths: paths,
-					strokeColor: '#BBD8E9',
+					strokeColor: polygonStrokeColor,
 					strokeOpacity: 1,
-					strokeWeight: 3,
-					fillColor: '#BBD8E9',
+					strokeWeight: 1,
+					fillColor: polygonFillColor,
 					fillOpacity: 0.6
 				});
 				/* Informationen zum Polygon hinzufuegen */
@@ -307,10 +310,10 @@ $(document).ready(function() {
 		/*	Polygon zeichnen */
 		polygon = map.drawPolygon({
 			paths: arr,
-			strokeColor: '#BBD8E9',
+			strokeColor: polygonStrokeColor,
 			strokeOpacity: 1,
-			strokeWeight: 3,
-			fillColor: '#BBD8E9',
+			strokeWeight: 1,
+			fillColor: polygonFillColor,
 			fillOpacity: 0.6
 		});
 
