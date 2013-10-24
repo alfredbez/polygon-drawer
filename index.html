@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Polygone zeichnen</title>
+		<!-- CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/animate.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- JS -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+		<script src="js/gmaps.js"></script>
+		<script src="js/script.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<h1>Polygone Tool</h1>
+			<div id="msg">&nbsp;</div>
+			<div class="alert alert-danger sr-only" id="delete-marker">
+				<h4>Wollen Sie diesen Marker wirklich löschen?</h4>
+				<p>Diese Aktion kann nicht wieder rückgänging gemacht werden.</p>
+				<button class="btn btn-danger" id="button-delete-marker">Ja, wirklich löschen</button>
+				<button class="btn btn-default dismiss-alert">Nein</button>
+			</div>
+			<div class="alert alert-danger sr-only" id="delete-polygon">
+				<h4>Wollen Sie dieses Polygon wirklich löschen?</h4>
+				<p>Diese Aktion kann nicht wieder rückgänging gemacht werden.</p>
+				<button class="btn btn-danger" id="button-delete-polygon">Ja, wirklich löschen</button>
+				<button class="btn btn-default dismiss-alert">Nein</button>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="panel panel-primary sr-only zeichnen-modus" id="panel-save">
+						<div class="panel-heading">Polygon speichern</div>
+						<div class="panel-body">
+							<form role="form">
+								<div class="radio">
+									<label>
+										<input type="radio" name="typ" value="1">
+										Baugrundstück
+								  </label>
+								</div>
+								<div class="radio">
+									<label>
+										<input type="radio" name="typ" value="2">
+										Gewerbegrundstück
+									</label>
+								</div>
+								<div class="form-group">
+									<label>Name</label>
+									<input type="text" class="form-control" name="name" placeholder="Name">
+								</div>
+								<div class="form-group">
+									<label>Beschreibung</label>
+									<textarea class="form-control" name="beschreibung" rows="3"></textarea>
+								</div>
+								<button type="button" class="btn btn-success" id="panel-save-button">Speichern</button>
+							</form>
+					  	</div>
+					</div>
+
+					<div class="panel panel-primary" id="panel-modus">
+						<div class="panel-heading">Modus auswählen</div>
+						<div class="panel-body">
+							<a href="#" class="btn btn-block btn-info" id="modus-zeichnen">Zeichnen-Modus wählen</a>
+							<a href="#" class="btn btn-block btn-default" id="modus-verwalten">Verwalten-Modus wählen</a>
+					  	</div>
+					</div>
+
+					<!-- Panels Verwalten Modus -->
+					<div class="panel panel-primary verwalten-modus" id="panel-polygon-overview">
+						<div class="panel-heading">verfügbare Polygone</div>
+						<div class="panel-body">
+							<div id="polygone">&nbsp;</div>
+					  	</div>
+					</div>
+					<div class="panel panel-primary verwalten-modus sr-only" id="panel-polygon-details">
+						<div class="panel-heading">weitere Infos zum Polygon</div>
+						<div class="panel-body">&nbsp;</div>
+					</div>
+
+					<!-- Panels Zeichnen Modus -->
+					<div class="panel panel-primary sr-only zeichnen-modus" id="panel-marker-edit">
+						<div class="panel-heading">Marker bearbeiten</div>
+						<div class="panel-body">
+							<div id="marker-form">&nbsp;</div>
+					  	</div>
+					</div>
+
+					<div class="panel panel-primary zeichnen-modus" id="panel-menu">
+						<div class="panel-heading">Marker hinzufügen</div>
+						<div class="panel-body row">
+							<p data-element="recorderMode" class="col-md-5"><span class="glyphicon glyphicon-map-marker" id="marker-indicator" title="Halten Sie die Taste 'n' gedrückt und klicken Sie auf die Karte, um einen neuen Marker zu setzen" data-toggle="tooltip">&nbsp;</span></p>
+							<div title="Setzen Sie mindestens 3 Marker, um ein Polygon zu zeichnen" data-toggle="tooltip" class="btn-sm col-md-6"><button id="zeichnen" class="btn btn-primary" disabled="disabled">Polygon zeichnen</button></div>
+					  	</div>
+					</div>
+
+					<div class="panel panel-primary zeichnen-modus" id="panel-marker">
+						<div class="panel-heading">Marker</div>
+						<div class="panel-body">
+							<div id="marker-info">
+									<i class="hinweis1">Halten Sie die Taste 'n' gedrückt und klicken Sie auf die Karte, um einen neuen Marker zu setzen</i>
+									<i class="sr-only hinweis2">Klicken Sie auf einen Marker, um diesen zu verschieben oder zu löschen. Sie können den Marker auch mit der Maus verschieben.</i>
+							</div>
+					  	</div>
+					</div>
+				</div>
+				<div id="map" class="col-md-9">&nbsp;</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,67 @@
+#page {
+    width: 1200px;
+    margin: 0 auto;
+}
+#map {
+    height: 800px;
+}
+#marker-indicator {
+    border-radius: 50%;
+    padding: 5px 8px;
+    background: #eee;
+    color: #bbb;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 20px;
+    margin-top: 6px;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+#marker-indicator.icon-on {
+    background: #428BCA;
+    color: #fff;
+}
+#marker-info i.hinweis2 {
+    display: inline-block;
+}
+.marker-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+}
+.panel-element {
+    padding: 5px;
+    background: #f0f0f0;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.panel-element:hover {
+    background: #fafafa;
+    border: 1px solid #bbb;
+    cursor: pointer;
+}
+.panel-element span{
+    display: block;
+}
+.panel-element span.latlng{
+    display: inline;
+}
+.panel-body p {
+    margin: 0;
+}
+.verwalten-modus{
+    display: none;
+}
+.poly-datetime {
+    display: block;
+}
+.poly-name {
+    font-weight: bold;
+}
