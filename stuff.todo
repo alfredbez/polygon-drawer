@@ -4,3 +4,4 @@ Button 'Kartenzentrum zurücksetzen' einbauen
 Wenn ein Polygon geöffnet wird, das aus dem sichtbaren Kartenbereich herausragt, soll das Zoom-Level angepasst werden
 Meldungen (alert z.B. 'Polygon wurde erfolgreich gespeichert!') nach einigen Sekunden automatisch entfernen
 Installationsskript erstellen
+Polygone bearbeiten (Name, Beschreibung, Marker verschieben)
