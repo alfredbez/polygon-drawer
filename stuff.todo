@@ -1,0 +1,6 @@
+Beim löschen eines Polygons nach oben (zum löschen-Dialog) scrollen
+Beim klicken auf Verwalten Modus eine loading-Animation im 'verfügbare Polygone'-Panel anzeigen
+Button 'Kartenzentrum zurücksetzen' einbauen
+Wenn ein Polygon geöffnet wird, das aus dem sichtbaren Kartenbereich herausragt, soll das Zoom-Level angepasst werden
+Meldungen (alert z.B. 'Polygon wurde erfolgreich gespeichert!') nach einigen Sekunden automatisch entfernen
+Installationsskript erstellen
