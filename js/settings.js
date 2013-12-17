@@ -19,3 +19,18 @@ var polygonFillColor    = '#ff4444',
 
 var mapCenterLat = 53.542654,
     mapCenterLng = 8.576374;
+
+/*
+    keyCode n = 78
+    um andere keyCodes zu ermitteln
+    folgenden Code eintragen:
+
+        console.log(e.keyCode);
+
+    Dann im Browser die Konsole oeffnen
+    die gewuenschten Tasten druecken.
+
+    Der jeweilige keyCode steht dann
+    in der Konsole
+*/
+var keyCode = 78;

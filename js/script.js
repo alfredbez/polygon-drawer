@@ -342,25 +342,12 @@ $(document).ready(function() {
 
 	/*	Eventlistener auf Tasteneingaben	*/
 	$('html').keydown(function(e) {
-		/* 
-			keyCode n = 78
-			um andere keyCodes zu ermitteln
-			folgenden Code eintragen:
-			
-				console.log(e.keyCode);
-			
-			Dann im Browser die Konsole oeffnen
-			die gewuenschten Tasten druecken.
-			
-			Der jeweilige keyCode steht dann
-			in der Konsole
-		*/
-		if (e.keyCode == 78) {
+		if (e.keyCode == keyCode) {
 			setRecorderMode(true);
 		}
 	});
 	$('html').keyup(function(e) {
-		if (e.keyCode == 78) {
+		if (e.keyCode == keyCode) {
 			setRecorderMode(false);
 		}
 	});
