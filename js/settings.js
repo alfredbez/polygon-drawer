@@ -1,36 +1,38 @@
 /*  Marker Icons    */
-var pinColor_default = "FF7E73";
-var pinColor_active = "FFC9C4";
-var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor_default,
-    new google.maps.Size(21, 34),
-    new google.maps.Point(0, 0),
-    new google.maps.Point(10, 34));
-var pinImage_active = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor_active,
-    new google.maps.Size(21, 34),
-    new google.maps.Point(0, 0),
-    new google.maps.Point(10, 34));
-var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
-    new google.maps.Size(40, 37),
-    new google.maps.Point(0, 0),
-    new google.maps.Point(12, 35));
+var pinColor_default = "FF7E73",
+    pinColor_active = "FFC9C4",
+    pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor_default,
+        new google.maps.Size(21, 34),
+        new google.maps.Point(0, 0),
+        new google.maps.Point(10, 34)),
+    pinImage_active = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor_active,
+        new google.maps.Size(21, 34),
+        new google.maps.Point(0, 0),
+        new google.maps.Point(10, 34)),
+    pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
+        new google.maps.Size(40, 37),
+        new google.maps.Point(0, 0),
+        new google.maps.Point(12, 35)),
 
-var polygonFillColor    = '#ff4444',
-    polygonStrokeColor  = '#ff0000';
+    polygonFillColor    = '#ff4444',
+    polygonStrokeColor  = '#ff0000',
 
-var mapCenterLat = 53.542654,
-    mapCenterLng = 8.576374;
+    mapCenterLat = 53.542654,
+    mapCenterLng = 8.576374,
 
 /*
     keyCode n = 78
     um andere keyCodes zu ermitteln
-    folgenden Code eintragen:
+    folgenden Code in der Konsole
+    des Browsers eintragen:
 
-        console.log(e.keyCode);
+        function getCode(e){
+            console.log(e.keyCode);
+        }
+        document.onkeydown = getCode;
 
-    Dann im Browser die Konsole oeffnen
-    die gewuenschten Tasten druecken.
+    dann die gewuenschten Tasten druecken
 
-    Der jeweilige keyCode steht dann
-    in der Konsole
+    der jeweilige keyCode steht nun in der Konsole
 */
-var keyCode = 78;
+    keyCode = 78;
